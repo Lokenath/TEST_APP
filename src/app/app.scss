@@ -14,3 +14,19 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.tranzitHeader{
+	.toolbar-background{
+		background: #222149;
+	}
+	.bar-buttons{
+		color: #8180C9;
+	}
+	.toolbar-title{
+		color: #8180C9;
+	}
+}
+.tranzitBackground{
+	background: #222149;
+}
