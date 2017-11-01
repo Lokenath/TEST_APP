@@ -1,18 +1,15 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-menu [content]="content" class="tranzitLeftMenu">
+  
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+      <button menuClose ion-item>About US</button>
+      <button menuClose ion-item>Share</button>
+      <button menuClose ion-item>Terms & Conditions</button>
+      <button menuClose ion-item>Request Features</button>
+      <button menuClose ion-item>Rate Us</button>
     </ion-list>
+    <p class="tranzitFooter">Trainzit Copyright 2017. All rights reserved</p>
   </ion-content>
-
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->

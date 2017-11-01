@@ -20,6 +20,9 @@
 	.toolbar-background{
 		background: #222149;
 	}
+	.back-button{
+		color: #8180C9;
+	}
 	.bar-buttons{
 		color: #8180C9;
 	}
@@ -29,4 +32,173 @@
 }
 .tranzitBackground{
 	background: #222149;
+}
+.textHeader{
+	display: flex;
+	justify-content: space-between;
+	h5{
+		font-size: 14px;
+		font-weight: 100;
+		color: #B4B2FF;
+		margin: 5px 0;
+	}
+}
+.bookingStatusContainer{
+	display: flex;
+	justify-content: space-between;
+	h3{
+		font-size: 32px;
+		font-weight: 100;
+		color: #FFF;
+		margin: 3px 0;
+	}
+}
+.chartLabel{
+	border-radius: 20px;
+	background: #171733;
+	color: #fff;
+	padding: 8px 0;
+	margin: 10px 0 20px;
+    text-align: center;
+    
+    .chartNotPrepared{
+    		color: #f55423;
+    }
+    .chartPrepared{
+    		color: #40b541;
+    }
+}
+.trainCard{
+	background: #fff;
+	padding: 15px;
+	border-radius: 5px;
+	
+	.trainDetails{
+		h5{
+			margin: 3px 0;
+			font-size: 12px;
+			color: #9B9BAD;
+		}
+		p{
+			margin: 0;
+			font-size: 16px;
+			color: #585876;
+		}
+		.boardReserv{
+			display: flex;
+			justify-content: space-between;
+			margin: 15px 0;
+		}
+	}
+	.dividerSection{
+	    width: 100%;
+	    border-bottom: 1px dashed #ddd;
+	    margin-bottom: 10px;
+	    position: relative;
+	    
+	    .circleLeft{
+	    		width: 25px;
+		    height: 25px;
+		    background: #22214a;
+		    position: absolute;
+		    border-radius: 20px;
+		    top: -12px;
+		    left: -29px;
+	    }
+	    .circleRight{
+	    		width: 25px;
+		    height: 25px;
+		    background: #22214a;
+		    position: absolute;
+		    border-radius: 20px;
+		    top: -12px;
+		    right: -29px;
+	    }
+	}
+	.stationDetails{
+		display: flex;
+		justify-content: space-between;
+		
+		div{
+			text-align: center;
+		}
+		.arrow{
+			    font-size: 36px;
+    				color: #bbbbbb;
+		}
+		h1{
+			font-size: 40px;
+			margin: 0;
+			font-weight: 100;
+			color: #585876;
+		}
+		p{
+			font-size: 12px;
+			margin: 0;
+			color: #9B9BAD;
+		}
+	}
+}
+.weatherCard{
+	background: #fff;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    
+    h5{
+    		margin: 0;
+		font-size: 16px;
+		font-weight: 400;
+		color: #585876;
+    }
+    h1{
+			font-size: 40px;
+			margin: 0;
+			font-weight: 100;
+			color: #585876;
+	}
+	.weatherDetails{
+		display: flex;
+	    justify-content: space-between;
+	    align-items: flex-end;
+	    margin-top: 10px;
+	    
+	    .weatherIcon{
+	    		color: #b0b0c5;
+	    		font-size: 60px;
+	    }
+	}
+}
+.tranzitLeftMenu{
+	.toolbar-background , ion-content{
+		background: #0c0b2b;
+	}
+	
+	ion-list{
+		margin-top: 75px;
+		button{
+			background: #0c0b2b;
+			color: #B4B2FF;
+			
+			.item-inner{
+				border-bottom: 0 !important;
+			}
+		}
+	}
+}
+.tranzitFooter{
+	color: #b0aefc;
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+}
+.pnrSearchBtn{
+	background: #3d3d6f;
+    width: calc(100% - 46px);
+    position: absolute;
+    left: 23px;
+    bottom: 10px;
 }
