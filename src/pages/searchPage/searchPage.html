@@ -8,6 +8,6 @@
 </ion-header>
 
 <ion-content padding class="tranzitBackground">
-  <ion-searchbar placeholder="Enter 10 digit PNR"></ion-searchbar>
-  <button class="pnrSearchBtn" ion-button full color="dark" (click)="navigateToResultPage()">Search</button>
+  <ion-searchbar placeholder="Enter 10 digit PNR" [(ngModel)]="searchedPnr" (ionInput)="onPnrType($event)"></ion-searchbar>
+  <button class="pnrSearchBtn" ion-button full color="dark" (click)="navigateToResultPage()" [disabled]="disabled">Search</button>
 </ion-content>
