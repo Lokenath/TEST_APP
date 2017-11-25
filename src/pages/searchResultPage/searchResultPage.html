@@ -9,33 +9,32 @@
 
 <ion-content padding class="tranzitBackground">
   <div class="textHeader">
-  	<h5>Booking status</h5>
+  	<h5>Current status</h5>
   	<h5>Class</h5>
   </div>
   <div class="bookingStatusContainer">
   	<div class="statusList">
-  		<h3>W/L 09</h3>
-  		<h3>W/L 09</h3>
+  		<h3 *ngFor="let eachPassenger of searchResultData.passengers">{{eachPassenger.current_status}}</h3>
   	</div>
   	<div class="classContainer">
-  		<h3>3A</h3>
+  		<h3>{{searchResultData.journey_class.code}}</h3>
   	</div>
   </div>
   <div class="chartLabel">
-  	<span class="chartNotPrepared">Chart not prepared</span>
+  	<span [ngClass]="{'chartNotPrepared': !searchResultData.chart_prepared, 'chartPrepared': searchResultData.chart_prepared}">Chart {{searchResultData.chart_prepared ? " " : " not " }} prepared</span>
   </div>
   <div class="trainCard">
   	<div class="trainDetails">
   		<h5>Train</h5>
-  		<p>12898 - Bhubaneswar-Puducherry SF Express</p>
+  		<p>{{searchResultData.train.number}} - {{searchResultData.train.name}}</p>
   		<div class="boardReserv">
   			<div>
   				<h5>Boarding Point</h5>
-  				<p>02 Feb, 20:00</p>
+  				<p>{{searchResultData.doj.split("-")[0]}} {{monthArr[searchResultData.doj.split("-")[1]-1]}}, {{searchResultData.doj.split("-")[2]}} {{searchResultData.boarding_time}}</p>
   			</div>
   			<div>
   				<h5>Reserved Upto</h5>
-  				<p>03 Feb, 04:30</p>
+  				<p>{{searchResultData.doj.split("-")[0]}} {{monthArr[searchResultData.doj.split("-")[1]-1]}}, {{searchResultData.doj.split("-")[2]}} {{searchResultData.reaching_time}}</p>
   			</div>
   		</div>
   	</div>
@@ -45,15 +44,15 @@
   	</div>
   	<div class="stationDetails">
   		<div>
-  			<h1>VZM</h1>
-  			<p>VIZANAGARAM</p>
+  			<h1>{{searchResultData.boarding_point.code}}</h1>
+  			<p>{{searchResultData.boarding_point.name}}</p>
   		</div>
   		<div>
   			<span class="arrow">&rarr;</span>
   		</div>
   		<div>
-  			<h1>MAS</h1>
-  			<p>CHENNAI CENTRAL</p>
+  			<h1>{{searchResultData.reservation_upto.code}}</h1>
+  			<p>{{searchResultData.reservation_upto.name}}</p>
   		</div>
   	</div>
   </div>

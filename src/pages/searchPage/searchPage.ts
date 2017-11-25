@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { SearchResultPage } from '../searchResultPage/searchResultPage';
 
+//API Key: 7gib32d29m
+
 @Component({
   selector: 'page-SearchPage',
   templateUrl: 'SearchPage.html'
@@ -11,7 +13,7 @@ export class SearchPage {
   disabled : boolean;
 
   constructor(private navCtrl: NavController, navParams: NavParams) {
-     this.searchedPnr = "10";
+     this.searchedPnr = "";
      this.disabled = true;
   }
   onPnrType(ev){
